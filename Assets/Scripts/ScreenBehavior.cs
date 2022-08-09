@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScreenBehavior : MonoBehaviour
 {
-    public ScreenOrientation orientation;
+    public string screenOrientation;
     [SerializeField] private int width;
     [SerializeField] private int height;
 
@@ -13,7 +13,10 @@ public class ScreenBehavior : MonoBehaviour
     }
     void Update()
     {
-        orientation = Screen.orientation;
+        if (Screen.orientation == ScreenOrientation.Portrait
+            || Screen.orientation == ScreenOrientation.PortraitUpsideDown) screenOrientation = "Portrait";
+        else if (Screen.orientation == ScreenOrientation.LandscapeLeft
+                 || Screen.orientation == ScreenOrientation.LandscapeLeft) screenOrientation = "Landscape";
         width = Screen.width;
         height = Screen.height;
     }
