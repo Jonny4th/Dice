@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class DragAndFlickMouse : MonoBehaviour
 {
     private bool isHolding = false;
@@ -11,7 +8,6 @@ public class DragAndFlickMouse : MonoBehaviour
     private Vector3 offset;
     [SerializeField] private LayerMask layerMask;
     private Vector3 pos0;
-
     private void Start()
     {
         pos0 = Input.mousePosition;

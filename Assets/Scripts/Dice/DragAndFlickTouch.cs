@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class DragAndFlickTouch : MonoBehaviour
 {
     private Touch touch01;

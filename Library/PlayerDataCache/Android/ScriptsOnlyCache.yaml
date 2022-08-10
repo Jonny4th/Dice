@@ -6,17 +6,15 @@ ScriptsOnlyBuild:
     - ClearGameObject
     - DragAndFlickMouse
     - DragAndFlickTouch
+    - FloatVariable
     - GameManager
+    - GetFrustum
+    - WallMove
     Unity.AdaptivePerformance.Editor.dll:
     - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceGeneralSettingsPerBuildTarget
-    Unity.AdaptivePerformance.Samsung.Android.Editor.dll:
-    - UnityEditor.AdaptivePerformance.Samsung.Android.Editor.SamsungAndroidProviderSettingsEditor
     Unity.AdaptivePerformance.Samsung.Android.dll:
     - UnityEngine.AdaptivePerformance.Samsung.Android.SamsungAndroidProviderLoader
     - UnityEngine.AdaptivePerformance.Samsung.Android.SamsungAndroidProviderSettings
-    Unity.AdaptivePerformance.Simulator.Editor.dll:
-    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderSettings
-    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderSettingsEditor
     Unity.AdaptivePerformance.dll:
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
@@ -109,6 +107,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -120,39 +120,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2008}
     - Class: 114
-      Script: {instanceID: 2726}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 4388}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 4196}
     - Class: 114
-      Script: {instanceID: 4666}
+      Script: {instanceID: 4392}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 6078}
+      Script: {instanceID: 4670}
     - Class: 114
-      Script: {instanceID: 6236}
+      Script: {instanceID: 5224}
     - Class: 114
-      Script: {instanceID: 6600}
+      Script: {instanceID: 5456}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 6088}
     - Class: 114
-      Script: {instanceID: 7918}
+      Script: {instanceID: 6242}
     - Class: 114
-      Script: {instanceID: 25596}
+      Script: {instanceID: 6590}
     - Class: 114
-      Script: {instanceID: 40478}
+      Script: {instanceID: 6608}
     - Class: 114
-      Script: {instanceID: 44218}
+      Script: {instanceID: 6714}
+    - Class: 114
+      Script: {instanceID: 7930}
+    - Class: 114
+      Script: {instanceID: 8388}
+    - Class: 114
+      Script: {instanceID: 8448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -176,12 +182,6 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.AdaptivePerformance.dll
     namespaceName: UnityEngine.AdaptivePerformance
@@ -192,6 +192,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -248,6 +254,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 26d606ff13c68d802183c77d4de59375
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DragAndFlickMouse
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Notifications.Android.dll
     namespaceName: Unity.Notifications.Android
@@ -278,7 +290,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 91d258529db2b5060a913f2afcea1a21
+      Hash: 4de78781075c75589cdbaad292fb6cff
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -572,6 +584,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 637c6901daec646d6e720038653f42ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GetFrustum
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -716,6 +734,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 7805dbebd103341782f3d6071ec8690f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddGameObject
+  - hash:
+      serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -830,12 +854,6 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 58e68364412c67eae2bdb4954be2dcc2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Readme
-  - hash:
-      serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -852,6 +870,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 87688f03e3ecc3fce3146df89657a521
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloatVariable
   - hash:
       serializedVersion: 2
       Hash: e09e8bebc0fcd32bb8af1287a6b44816
@@ -1028,6 +1052,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: c91c24b7d3b6b2991572f426b51baff3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowMousePosition
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.AdaptivePerformance.dll
     namespaceName: UnityEngine.AdaptivePerformance
@@ -1094,6 +1124,18 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 8ed7fb3f5a97e7a73e4b3eb6645ecc5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClearGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 37cb51e4851a5e9d9723a49977ab1c84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WallMove
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1124,28 +1166,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 26d606ff13c68d802183c77d4de59375
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DragAndFlickMouse
-  - hash:
-      serializedVersion: 2
-      Hash: c91c24b7d3b6b2991572f426b51baff3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FollowMousePosition
-  - hash:
-      serializedVersion: 2
-      Hash: 7805dbebd103341782f3d6071ec8690f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AddGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 8ed7fb3f5a97e7a73e4b3eb6645ecc5a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ClearGameObject
+    className: DiceClass
   platform: 13
   scenePathNames:
   - Assets/Scenes/Dice.unity

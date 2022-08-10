@@ -7,7 +7,9 @@
 
 using UnityEngine;
 
+#if UNITY_EDITOR
 [CreateAssetMenu]
+#endif
 public class FloatVariable : ScriptableObject
 {
     public float Value;

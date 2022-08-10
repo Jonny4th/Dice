@@ -4,10 +4,6 @@
 // Author: Ryan Hipple
 // Date:   10/04/17
 // ----------------------------------------------------------------------------
-
-using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEngine.UIElements;
 using System;
 
 [Serializable] 
