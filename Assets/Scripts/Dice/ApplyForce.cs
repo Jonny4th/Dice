@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody), (typeof(Collider)))]
 public class ApplyForce : MonoBehaviour
 {
     [SerializeField] private Button rollButton;
