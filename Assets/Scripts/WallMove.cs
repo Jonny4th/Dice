@@ -9,12 +9,12 @@ public class WallMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.transform.position = posRef.Value/2 * direction;
+        gameObject.transform.position = 1.9f * direction;
         posCache = posRef.Value;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, 
                                                             posRef.Value/2 * direction, 
