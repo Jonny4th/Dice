@@ -45,7 +45,6 @@ public class ApplyForce : MonoBehaviour
         float z = Random.Range(zm,zM);
 
         Vector3 vector = new Vector3(x,y,z).normalized;
-        Debug.Log(vector);
         return vector;
     }
 }
