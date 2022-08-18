@@ -28,12 +28,12 @@ public class ApplyForce : MonoBehaviour
     public void _ApplyForce()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
-        if (rigidbody.velocity.magnitude == 0)
-        {
+        // if (rigidbody.velocity.magnitude == 0)
+        // {
             rigidbody.AddForce(RandomVector3(-1f,1f,0.8f,1f,-1f,1f) * forceMagnitude, ForceMode.Acceleration);
             rigidbody.AddTorque(transform.forward * torqueMagnitude);
             rigidbody.AddTorque(transform.right * torqueMagnitude);
-        }
+        // }
     }
 
     private Vector3 RandomVector3(float xm = -1f, float xM = 1f,
