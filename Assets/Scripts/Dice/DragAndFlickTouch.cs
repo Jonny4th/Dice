@@ -1,14 +1,7 @@
 using UnityEngine;
-public class DragAndFlickTouch : MonoBehaviour
+public class DragAndFlickTouch : DragAndFlick
 {
     private Touch touch01;
-    private bool isHolding = false;
-    private GameObject toDrag;
-    [SerializeField] private float holdingDist;
-    private Vector3 currentPos;
-    private Vector3 offset;
-    [SerializeField] private LayerMask layerMask;
-    private Vector3 pos0;
 
     private void Start()
     {

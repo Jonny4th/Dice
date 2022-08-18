@@ -1,23 +1,16 @@
 using UnityEngine;
-public class DragAndFlickMouse : MonoBehaviour
+using System.Collections;
+using System.Collections.Generic;
+
+public class DragAndFlickMouse : DragAndFlick
 {
-    private bool isHolding = false;
-    private GameObject toDrag;
-    [SerializeField] private float holdingDist;
-    private Vector3 currentPos;
-    private Vector3 offset;
-    [SerializeField] private LayerMask layerMask;
-    private Vector3 pos0;
     private void Start()
     {
         pos0 = Input.mousePosition;
     }
     void Update()
     {
-        Vector3 pos = Input.mousePosition; //get touch position.
-        Vector3 vel = (pos - pos0)/Time.deltaTime;
-        pos0 = pos; //update the variable.
-
+        pos = Input.mousePosition; //get touch position.
         //Drag object
         if (isHolding && Input.GetMouseButton(0))
         {
@@ -33,6 +26,7 @@ public class DragAndFlickMouse : MonoBehaviour
         //Release object
         if (isHolding && Input.GetMouseButtonUp(0))
         {
+            vel = (pos - pos0)/Time.deltaTime;
             Rigidbody _rigidbody = toDrag.GetComponent<Rigidbody>(); // cache game object rigidbody.
             float mod = Random.Range(0,1f);
             _rigidbody.AddTorque(Vector3.right * vel.magnitude * mod);
@@ -53,7 +47,7 @@ public class DragAndFlickMouse : MonoBehaviour
                     if (hit.collider.gameObject.GetComponent<Rigidbody>().velocity.magnitude == 0)
                     {
                         isHolding = true; // dragging is successful.
-                        toDrag = hit.collider.gameObject; // cache gameObjrct data.
+                        toDrag = hit.collider.gameObject; // cache gameObjrct data. 
                         toDrag.GetComponent<Rigidbody>().useGravity = false; // disable gravity so the object stay on hold above ground.
                         Vector3 startPos = toDrag.transform.position; // get starting world position.
                         currentPos = new Vector3(startPos.x, holdingDist, startPos.z);
@@ -62,5 +56,6 @@ public class DragAndFlickMouse : MonoBehaviour
                 }
             }
         }
+        pos0 = pos; //update the variable.
     }
 }

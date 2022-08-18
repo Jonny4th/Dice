@@ -1,18 +1,33 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ClearGameObject : MonoBehaviour
+public class ClearGameObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
+    GameObjectArray heldDice;
     [SerializeField] private string _tag;
-    // Start is called before the first frame update
+    private bool isPointerOver;
+
+    private void Update()
+    {
+    }
 
     public void ClearObject()
     {
-        GameObject[] objects;
-        objects = GameObject.FindGameObjectsWithTag(_tag);
+        Destroy(heldDice);
+    }
 
-        foreach(GameObject obj in objects)
-        {
-            Destroy(obj);
-        }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isPointerOver = false;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        
     }
 }
