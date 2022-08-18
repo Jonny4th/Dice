@@ -18,7 +18,7 @@ namespace DiceBehavior
         {
             Vector3 startPos = transform.position;
             startPos.y = holdingHeight;
-            transform.position = startPos;
+            transform.position = Vector3.Lerp(transform.position, startPos, 0.5f);
             Vector3 objectPoint = mainCamera.WorldToScreenPoint(transform.position);
             zCoor = objectPoint.z;
             _rigidbody.useGravity = false;
