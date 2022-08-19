@@ -8,10 +8,14 @@ public class Destroy : MonoBehaviour
     private void Awake() {
         clearButton = GameObject.Find("Clear").GetComponent<Button>();
     }
-
+    private void OnEnable() {
+        clearButton.GetComponent<Button>().onClick.AddListener(clear);
+    }
+    private void OnDisable() {
+        clearButton.GetComponent<Button>().onClick.RemoveListener(clear);
+    }
     void Start()
     {
-        clearButton.GetComponent<Button>().onClick.AddListener(clear);
     }
 
     private void OnMouseUp()
