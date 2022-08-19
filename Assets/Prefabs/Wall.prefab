@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posRef: {fileID: 11400000, guid: 3f751c832fe5c9248ab7d76dc77b5b2c, type: 2}
-  waitTime: 0.5
+  t: 0.7
 --- !u!54 &-4955176354956642057
 Rigidbody:
   m_ObjectHideFlags: 0
