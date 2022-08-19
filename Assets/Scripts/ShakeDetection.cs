@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ShakeDetection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public delegate void Shake();
+    public static event Shake OnShake;
+    [SerializeField] float shakeThreshold;
+    private float sqrMagnitude;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.acceleration.sqrMagnitude > shakeThreshold) OnShake();
     }
 }
