@@ -10,10 +10,10 @@ namespace DiceBehavior
         private void OnMouseUp()
         {
             Rigidbody _rigidbody = GetComponent<Rigidbody>(); // cache game object rigidbody.
-            Vector3 vel = _rigidbody.velocity;
+            float speed = _rigidbody.velocity.sqrMagnitude;
             float mod = Random.Range(0,1f);
-            _rigidbody.AddTorque(Vector3.right * vel.magnitude * mod * velMultiplier);
-            _rigidbody.AddTorque(Vector3.forward * vel.magnitude * (1f-mod) * velMultiplier);
+            _rigidbody.AddTorque(Vector3.right * speed * mod * velMultiplier);
+            _rigidbody.AddTorque(Vector3.forward * speed * (1f-mod) * velMultiplier);
         }
     }
 }
