@@ -6,6 +6,8 @@
 // ----------------------------------------------------------------------------
 
 using UnityEngine;
+using System;
+using UnityEngine.UIElements;
 
 #if UNITY_EDITOR
 [CreateAssetMenu]

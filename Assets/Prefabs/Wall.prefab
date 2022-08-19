@@ -68,8 +68,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336f364906b883144b1713522e090647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posRef: {fileID: 11400000, guid: 3f751c832fe5c9248ab7d76dc77b5b2c, type: 2}
-  waitTime: {fileID: 11400000, guid: 87b0c32d28ccb984093d3d0a88a7c0eb, type: 2}
+  posRef:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  stepDistance:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 87b0c32d28ccb984093d3d0a88a7c0eb, type: 2}
 --- !u!54 &-4955176354956642057
 Rigidbody:
   m_ObjectHideFlags: 0

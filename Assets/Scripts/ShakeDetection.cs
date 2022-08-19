@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ShakeDetection : MonoBehaviour
 {
-    public delegate void Shake();
-    public static event Shake OnShake;
+    public static event Action OnShake;
     [SerializeField] float shakeThreshold;
     [SerializeField] private float downTime;
     private float lastTriggerTime = 0;
@@ -17,7 +17,7 @@ public class ShakeDetection : MonoBehaviour
         {
             if (Input.acceleration.sqrMagnitude > shakeThreshold)
             {
-                OnShake();
+                OnShake?.Invoke();
                 lastTriggerTime = Time.time;
             }
         }

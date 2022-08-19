@@ -1,22 +1,31 @@
 using UnityEngine;
+using System;
 
 public class GetFrustum : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
-    [SerializeField] private float distance;
-    [SerializeField] private FloatVariable frustumHeight;
-    [SerializeField] private FloatVariable frustumWidth;
-    
-    void Start()
-    {
-        distance = _camera.transform.position.y;
-    }
+    [SerializeField] Camera _camera;
+    [SerializeField] float distance;
+    [SerializeField] FloatVariable frustumHeight;
+    [SerializeField] FloatVariable frustumWidth;
+    [SerializeField] float screenRatio;
+    public static event Action OnAspectChange;
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Awake() {
+        distance = _camera.transform.position.y;
+        screenRatio = _camera.aspect;
         frustumHeight.SetValue(Height(_camera, distance));
         frustumWidth.SetValue(Width(_camera, distance));
+    }
+
+    void Update()
+    {
+        if (screenRatio != _camera.aspect)
+        {
+            frustumHeight.SetValue(Height(_camera, distance));
+            frustumWidth.SetValue(Width(_camera, distance));
+            OnAspectChange?.Invoke();
+            screenRatio = _camera.aspect;
+        }
     }
 
     public float Height(Camera camera, float distance)

@@ -20,6 +20,10 @@ public class Destroy : MonoBehaviour
         if(triggerOn) DestroyThis();
     }
 
+    private void Update() {
+        if (transform.position.y < 0) DestroyThis();
+    }
+
     private void DestroyThis()
     {
         Destroy(gameObject);
