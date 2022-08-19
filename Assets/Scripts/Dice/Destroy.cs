@@ -17,7 +17,6 @@ public class Destroy : MonoBehaviour
     }
 
     private void OnMouseUp() {
-        Debug.Log("Release.");
         if(triggerOn) DestroyThis();
     }
 

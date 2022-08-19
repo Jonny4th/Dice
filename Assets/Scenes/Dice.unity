@@ -175,7 +175,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 32.75
-  field of view: 11
+  field of view: 9
   orthographic: 0
   orthographic size: 2.64
   m_Depth: -1
@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111153307}
   m_LocalRotation: {x: 0.7071303, y: -0, z: -0, w: 0.7070833}
-  m_LocalPosition: {x: 0, y: 17.8, z: -0}
+  m_LocalPosition: {x: 0, y: 18.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeThreshold: 5
+  downTime: 1
 --- !u!1 &210720956
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +630,12 @@ PrefabInstance:
       propertyPath: posRef
       value: 
       objectReference: {fileID: 11400000, guid: bec85a2792e71c1419b9f7f843123cfe,
+        type: 2}
+    - target: {fileID: 8711978290987061756, guid: 336220781f340da47a179b4d653e424c,
+        type: 3}
+      propertyPath: waitTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 87b0c32d28ccb984093d3d0a88a7c0eb,
         type: 2}
     - target: {fileID: 8711978290987061757, guid: 336220781f340da47a179b4d653e424c,
         type: 3}
@@ -1419,7 +1426,7 @@ PrefabInstance:
     - target: {fileID: 8767537470236487318, guid: 51a5373fac16c2d4fae9b31c01be3d8d,
         type: 3}
       propertyPath: velMultiplier
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a5373fac16c2d4fae9b31c01be3d8d, type: 3}
@@ -1635,7 +1642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 80, y: 43.30005}
+  m_AnchoredPosition: {x: 100, y: 43.30005}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646493796
@@ -1732,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74cf3b02bb799749be5f522adc19868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedDice: {fileID: 11400000, guid: 885b0b7865479d942a249547128418b4, type: 2}
 --- !u!1 &1721684877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1778,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -80, y: 43.30005}
+  m_AnchoredPosition: {x: -100, y: 43.30005}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721684879

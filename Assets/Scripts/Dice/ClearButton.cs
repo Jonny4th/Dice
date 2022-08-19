@@ -9,7 +9,6 @@ public class ClearButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         foreach (var item in selectedDice.gameObjects)
         {
             item.GetComponent<Destroy>().triggerOn = true;
-            Debug.Log("Delete trigger on.");
         }
     }
 
@@ -18,7 +17,6 @@ public class ClearButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         foreach (var item in selectedDice.gameObjects)
         {
             item.GetComponent<Destroy>().triggerOn = false;
-            Debug.Log("Delete trigger off.");    
         }
     }
 }

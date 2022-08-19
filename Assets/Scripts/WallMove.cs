@@ -5,7 +5,7 @@ public class WallMove : MonoBehaviour
 {
     [SerializeField] private FloatVariable posRef;
     private float posCache;
-    [SerializeField] private float t;
+    [SerializeField] private FloatVariable waitTime;
 
     void Start()
     {
@@ -15,9 +15,22 @@ public class WallMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position != -posRef.Value/2 * transform.forward)
+        if (posCache != posRef.Value)
         {
-            transform.position = Vector3.Lerp(transform.position, -posRef.Value/2 * transform.forward, t);
+            StartCoroutine(Move(transform.position, -posRef.Value/2 * transform.forward));
         }
+    }
+
+    IEnumerator Move(Vector3 start, Vector3 destination)
+    {
+        var t = 0f;
+        while (t < waitTime.Value)
+        {
+            transform.position = Vector3.Lerp(start, destination, t/waitTime.Value);
+            t += Time.deltaTime;
+            if (t > waitTime.Value) t = waitTime.Value;
+            yield return null;
+        }
+        posCache = posRef.Value;
     }
 }

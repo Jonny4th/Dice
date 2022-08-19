@@ -19,7 +19,6 @@ namespace DiceBehavior
 
         private void OnMouseDown()
         {
-            Debug.Log(gameObject.GetType());
             selectedDice.gameObjects.Add(gameObject);
             //Pick up a dice from the floor, making the dice hover above floor.
             _rigidbody.useGravity = false; //disable gravity, just in case.

@@ -7,10 +7,19 @@ public class ShakeDetection : MonoBehaviour
     public delegate void Shake();
     public static event Shake OnShake;
     [SerializeField] float shakeThreshold;
+    [SerializeField] private float downTime;
+    private float lastTriggerTime = 0;
     private float sqrMagnitude;
 
     void Update()
     {
-        if (Input.acceleration.sqrMagnitude > shakeThreshold) OnShake();
+        if (Time.time > lastTriggerTime + downTime)
+        {
+            if (Input.acceleration.sqrMagnitude > shakeThreshold)
+            {
+                OnShake();
+                lastTriggerTime = Time.time;
+            }
+        }
     }
 }
