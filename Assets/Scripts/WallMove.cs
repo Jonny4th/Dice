@@ -26,9 +26,9 @@ public class WallMove : MonoBehaviour
         var t = 0f;
         while (t < waitTime.Value)
         {
+            t += Time.deltaTime;
             if (t > waitTime.Value) t = waitTime.Value;
             transform.position = Vector3.Lerp(start, destination, t/waitTime.Value);
-            t += Time.deltaTime;
             yield return null;
         }
         posCache = posRef.Value;
