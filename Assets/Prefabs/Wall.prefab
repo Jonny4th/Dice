@@ -55,7 +55,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: -0.5}
+  m_Center: {x: 0, y: 0.25, z: -0.5}
 --- !u!114 &8711978290987061756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posRef: {fileID: 11400000, guid: 3f751c832fe5c9248ab7d76dc77b5b2c, type: 2}
-  t: 0.7
+  t: 1
 --- !u!54 &-4955176354956642057
 Rigidbody:
   m_ObjectHideFlags: 0

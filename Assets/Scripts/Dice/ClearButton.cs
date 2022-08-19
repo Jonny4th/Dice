@@ -1,15 +1,24 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClearButton : MonoBehaviour, IDropHandler, IPointerUpHandler
+public class ClearButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public void OnDrop(PointerEventData eventData)
+    [SerializeField] private GameObjectArray selectedDice;
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Drop!!!");;
+        foreach (var item in selectedDice.gameObjects)
+        {
+            item.GetComponent<Destroy>().triggerOn = true;
+            Debug.Log("Delete trigger on.");
+        }
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Pointer Up!!!");
+        foreach (var item in selectedDice.gameObjects)
+        {
+            item.GetComponent<Destroy>().triggerOn = false;
+            Debug.Log("Delete trigger off.");    
+        }
     }
 }

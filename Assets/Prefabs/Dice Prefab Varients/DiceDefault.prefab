@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearButton: {fileID: 0}
+  triggerOn: 0
 --- !u!114 &-4003326746286639395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74185acb179dd5d4181e321d159253e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedDice: {fileID: 11400000, guid: 885b0b7865479d942a249547128418b4, type: 2}
   offset: {x: 0, y: 0, z: 0}
   holdingHeight: 2
   zCoor: 0
@@ -121,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee921f661eacf44d81b81e31beadf26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velMultiplier: 0

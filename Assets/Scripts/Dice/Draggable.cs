@@ -4,6 +4,7 @@ namespace DiceBehavior
     public class Draggable : MonoBehaviour
     {
         Camera mainCamera;
+        [SerializeField] GameObjectArray selectedDice;
         [SerializeField] Vector3 offset;
         Rigidbody _rigidbody;
         [SerializeField] float holdingHeight;
@@ -18,6 +19,8 @@ namespace DiceBehavior
 
         private void OnMouseDown()
         {
+            Debug.Log(gameObject.GetType());
+            selectedDice.gameObjects.Add(gameObject);
             //Pick up a dice from the floor, making the dice hover above floor.
             _rigidbody.useGravity = false; //disable gravity, just in case.
             transform.position = Vector3.Lerp(transform.position, YAxisModified(transform.position, holdingHeight), 0.2f); //Make the GO float.
@@ -30,6 +33,7 @@ namespace DiceBehavior
             _rigidbody.velocity = 5f * (YAxisModified(GetMouseWorldPos(zCoor) + offset, holdingHeight) - transform.position);
         }
         private void OnMouseUp() {
+            selectedDice.gameObjects.Remove(gameObject);
             _rigidbody.useGravity = true;
         }
 
