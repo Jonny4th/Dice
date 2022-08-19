@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 744192035}
   - component: {fileID: 744192034}
   - component: {fileID: 744192033}
+  - component: {fileID: 744192037}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
@@ -934,6 +935,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744192031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &744192037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744192031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55d6f28529676e4bb2729e0068bf025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenPoint: {x: 0, y: 0, z: 0}
+  worldPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1246969983
 PrefabInstance:
   m_ObjectHideFlags: 0

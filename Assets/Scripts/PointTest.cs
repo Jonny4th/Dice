@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PointTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Vector3 screenPoint;
+    public Vector3 worldPoint;
+    private void OnMouseDrag()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        screenPoint = Input.mousePosition;
+        screenPoint.z = Camera.main.transform.position.y;
+        worldPoint = Camera.main.ScreenToWorldPoint(screenPoint);
     }
 }
