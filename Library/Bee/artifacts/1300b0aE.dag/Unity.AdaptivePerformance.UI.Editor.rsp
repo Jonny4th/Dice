@@ -343,9 +343,7 @@
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Transactions.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"D:/Program Files/Unity Hub/Editor/2021.3.6f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
--r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
--r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Library/PackageCache/com.unity.adaptiveperformance@4.0.1/Editor/UI/UsageDial.cs"
 -langversion:9.0
