@@ -1,8 +1,11 @@
 /.vscode
 /Assembly-CSharp-Editor.csproj
 /Assembly-CSharp.csproj
-/Logs
-/obj
-/ProjectSettings
-/UserSettings
-Library/
+/[Ll]ogs/
+/[Oo]bj/
+/[Pp]roject[Ss]ettings/
+/[Uu]ser[Ss]ettings/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Bb]uild/
+/[Bb]uilds/
