@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedDice: {fileID: 11400000, guid: 885b0b7865479d942a249547128418b4, type: 2}
   offset: {x: 0, y: 0, z: 0}
-  holdingHeight: 2
+  holdingHeight: 2.5
   zCoor: 0
 --- !u!114 &-5898746813551101073
 MonoBehaviour:
